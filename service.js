@@ -8,7 +8,7 @@ require("dotenv").config();  // env 연결
 const port = process.env.PORT || 5000;
 const corsOptions = {
   origin: [
-    "https://web-searchmetro-frontend-m5kj7lff67bc616e.sel4.cloudtype.app/",
+    "https://web-searchmetro-frontend-m5kj7lff67bc616e.sel4.cloudtype.app",
     "https://port-0-searchmetro-backend-m5kj7lff67bc616e.sel4.cloudtype.app/",
     "http://localhost:3000",
   ],
