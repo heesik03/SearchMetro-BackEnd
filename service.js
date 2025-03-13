@@ -7,7 +7,11 @@ require("dotenv").config();  // env 연결
 
 const port = process.env.PORT || 8080;
 const corsOptions = {
-  origin: "http://localhost:3000", // react 링크
+  origin: [
+    "https://web-searchmetro-frontend-m5kj7lff67bc616e.sel4.cloudtype.app/",
+    "https://port-0-searchmetro-backend-m5kj7lff67bc616e.sel4.cloudtype.app/",
+    "http://localhost:3000",
+  ],
   credentials: true, // 클라이언트에서 쿠키를 포함한 요청을 보내도록 허용
 };
 service.use(cors(corsOptions)); // cors 설정
