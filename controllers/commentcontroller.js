@@ -37,7 +37,10 @@ const postComment =  async (req, res) => {
         res.send({message : `${userid} ${query} 글 작성 성공!`});
     } catch (error) {
         console.error(`postComment ERROR : ${error}`);
-        return res.send({error : "서버 오류로 글 작성에 실패했습니다."});
+        if (error.name === 'ValidationError') {
+            return res.send({error: "내용은 2글자 이상이여야 합니다."});
+        }
+        return res.send({error: "서버 오류로 글 작성에 실패했습니다."});
     }
 }
 
